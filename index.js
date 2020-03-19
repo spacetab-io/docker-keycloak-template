@@ -6,7 +6,7 @@ const postcss = require('postcss')
 
 var result = sass.renderSync({
     file: 'keycloak.scss',
-    outputStyle: 'compressed',
+    //outputStyle: 'compressed',
     outFile: './output.css',
 });
 
