@@ -1,4 +1,4 @@
-<#macro registrationLayout title='Log In' displayMessage=false >
+<#macro registrationLayout displayMessage=false >
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -272,7 +272,7 @@
 </div>
 <div class="st-app__box">
     <h1 class="st-app__title">
-        ${title!}
+        <#nested "title">
     </h1>
     <#if displayMessage && message?has_content && (message.type != 'warning' || !isAppInitiatedAction??)>
     <div class="st-app__error">

@@ -1,5 +1,8 @@
 <#import "template.ftl" as layout>
 <@layout.registrationLayout ; section>
+<#if section = "title">
+    Log In
+</#if>
 <#if section = "form">
 <form onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
     <div class="st-app__input">

@@ -34,22 +34,24 @@
         <div class="st-app__text">
             2. Open the application and scan the barcode
         </div>
-        <div class="st-app__qr-cont">
+        <div class="st-app__qr-cont js-image-cont">
             <img class="st-app__qr"
                  src="qr.png">
-            <a class="st-app__link"
+            <a class="st-app__link js-show-qr-code"
                href="#">
                 Unable to scan?
             </a>
         </div>
-        <div class="st-app__qr-cont st-app__qr-cont_mobile">
-            <div class="st-app__qr-hash">
-                TEQI4DHFALLWYWX3JAXJAAGQGLLEGGOQ
+        <div class="st-app__qr-cont st-app__qr-cont_mobile js-code-cont">
+            <div class="st-app__qr-hash js-qr-hash">
+                <input class="st-app__qr-input js-qr-code-input"
+                       value="TEQI4DHFALLWYWX3JAXJAAGQGLLEGGOQ"
+                       type="text">
                 <svg class="st-app__icon">
                     <use xlink:href="#copy" />
                 </svg>
             </div>
-            <a class="st-app__link"
+            <a class="st-app__link js-show-qr-image"
                href="#">
                 Show QR Code
             </a>
@@ -69,15 +71,18 @@
             </svg>
         </div>
     </form>
-    <div class="st-app__copy-notify">
+    <div class="st-app__copy-notify js-copy-modal">
         Code is copied to clickboard!
-        <svg class="st-app__icon st-app__icon_notify">
+        <svg class="st-app__icon st-app__icon_notify js-close-copy">
             <use xlink:href="#close" />
         </svg>
     </div>
-    <div class="st-app__overlay">
+    <div class="st-app__overlay js-qr-modal">
         <div class="st-app__modal">
-
+            <svg class="st-app__icon st-app__icon_modal js-close-qr-modal">
+                <use xlink:href="#close" />
+            </svg>
+            <img class="st-app__modal-qr" src="qr.png">
         </div>
     </div>
 </div>
@@ -101,8 +106,9 @@
         <path fill="#A6ABBD" fill-opacity=".65" fill-rule="evenodd" d="M13.333 13.333v3.334c0 .96-.706 1.666-1.667 1.666H3.333c-.96 0-1.667-.706-1.667-1.666V8.333c0-.96.707-1.666 1.667-1.666h3.333V3.333c0-.96.707-1.666 1.667-1.666h8.333c.96 0 1.667.706 1.667 1.666v8.334c0 .96-.706 1.666-1.666 1.666h-3.334zm-1.667 0H8.333c-.96 0-1.667-.706-1.667-1.666V8.333H3.333v8.334h8.334v-3.334zm-3.333-10v8.334h8.333V3.333H8.333z" clip-rule="evenodd"/>
     </symbol>
     <symbol id="close" width="14" height="14" fill="none" viewBox="0 0 14 14">
-        <path fill="#fff" fill-opacity=".2" d="M7.991 7L14 13.009l-.991.991L7 7.991.991 14 0 13.009 6.009 7 0 .991.991 0 7 6.009 13.009 0 14 .991 7.991 7z"/>
+        <path fill="currentColor" d="M7.991 7L14 13.009l-.991.991L7 7.991.991 14 0 13.009 6.009 7 0 .991.991 0 7 6.009 13.009 0 14 .991 7.991 7z"/>
     </symbol>
 </svg>
+<script src="otp.js"></script>
 </body>
 </html>
