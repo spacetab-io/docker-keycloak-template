@@ -56,12 +56,6 @@
                 </svg>
             </button>
         </form>
-        <div class="st-app__copy-notify js-copy-modal">
-            Code is copied to clickboard!
-            <svg class="st-app__icon st-app__icon_notify js-close-copy">
-                <use xlink:href="#close" />
-            </svg>
-        </div>
         <div class="st-app__overlay js-qr-modal">
             <div class="st-app__modal">
                 <svg class="st-app__icon st-app__icon_modal js-close-qr-modal">

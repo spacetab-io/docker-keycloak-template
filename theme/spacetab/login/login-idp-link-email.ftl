@@ -3,14 +3,14 @@
     <#if section = "header">
         ${msg("emailLinkIdpTitle", idpAlias)}
     <#elseif section = "form">
-        <p id="instruction1" class="instruction">
+        <div class="st-app__text">
             ${msg("emailLinkIdp1", idpAlias, brokerContext.username, realm.displayName)}
-        </p>
-        <p id="instruction2" class="instruction">
-            ${msg("emailLinkIdp2")} <a href="${url.loginAction}">${msg("doClickHere")}</a> ${msg("emailLinkIdp3")}
-        </p>
-        <p id="instruction3" class="instruction">
-            ${msg("emailLinkIdp4")} <a href="${url.loginAction}">${msg("doClickHere")}</a> ${msg("emailLinkIdp5")}
-        </p>
+        </div>
+        <div class="st-app__text">
+            ${msg("emailLinkIdp2")} <a class="st-app__link" href="${url.loginAction}">${msg("doClickHere")}</a> ${msg("emailLinkIdp3")}
+        </div>
+        <div class="st-app__text">
+            ${msg("emailLinkIdp4")} <a class="st-app__link" href="${url.loginAction}">${msg("doClickHere")}</a> ${msg("emailLinkIdp5")}
+        </div>
     </#if>
 </@layout.registrationLayout>

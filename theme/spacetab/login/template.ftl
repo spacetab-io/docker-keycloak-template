@@ -272,7 +272,7 @@
 </div>
 <div class="st-app__box">
     <h1 class="st-app__title">
-        <#nested "title">
+        <#nested "header">
     </h1>
     <#if displayMessage && message?has_content && (message.type != 'warning' || !isAppInitiatedAction??)>
     <div class="st-app__error">
@@ -283,6 +283,12 @@
     </div>
     </#if>
     <#nested "form">
+    <div class="st-app__copy-notify js-copy-modal">
+        Code is copied to clipboard!
+        <svg class="st-app__icon st-app__icon_notify js-close-copy">
+            <use xlink:href="#close" />
+        </svg>
+    </div>
 </div>
 <svg style="display: none">
     <symbol id="login" width="22" height="22" fill="none" viewBox="0 0 22 22">

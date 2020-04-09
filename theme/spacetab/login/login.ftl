@@ -1,6 +1,6 @@
 <#import "template.ftl" as layout>
 <@layout.registrationLayout ; section>
-<#if section = "title">
+<#if section = "header">
     Log In
 </#if>
 <#if section = "form">
