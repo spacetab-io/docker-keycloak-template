@@ -7,11 +7,11 @@ const postcss = require('postcss')
 var result = sass.renderSync({
     file: 'keycloak.scss',
     //outputStyle: 'compressed',
-    outFile: './output.css',
+    outFile: 'theme/spacetab/output.css',
 });
 
 postcss([ autoprefixer ]).process(result.css).then(result => {
-    fs.writeFileSync('output.css', result.css);
+    fs.writeFileSync('theme/spacetab/output.css', result.css);
     console.log(result);
 });
 
