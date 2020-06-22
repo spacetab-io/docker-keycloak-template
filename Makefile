@@ -4,6 +4,9 @@ VERSION = 5.0.0-1.0.0
 image:
 	docker build -t $(IMAGE):$(VERSION) .
 
+push:
+	docker push $(IMAGE):$(VERSION)
+
 # -v $(pwd):/tmp -e ROOT_LOGLEVEL=DEBUG \ -e KEYCLOAK_LOGLEVEL=DEBUG \
 
 run:
