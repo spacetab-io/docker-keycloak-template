@@ -13,7 +13,7 @@ make image run
 
 ## Docker
 
-* `spacetabio/keycloak:5.0.0-1.0.0` – image where contains this theme.
+* `spacetabio/keycloak:5.0.0-1.0.0` – image where contains this theme. <br>
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/keycloak:5.0.0-1.0.0?style=flat-square)
 ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/keycloak:5.0.0-1.0.0?style=flat-square)
 
