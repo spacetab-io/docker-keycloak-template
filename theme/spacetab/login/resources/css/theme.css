@@ -367,6 +367,17 @@ html {
   position: relative;
 }
 
+.st-app__footer {
+  position: fixed;
+  bottom: 20px;
+  color: #fff;
+}
+
+.st-app__site-link {
+  text-decoration: none;
+  color: #6080ff;
+}
+
 .sk-circle-bounce {
   display: none;
   width: 2em;

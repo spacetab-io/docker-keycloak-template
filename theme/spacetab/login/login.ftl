@@ -6,7 +6,7 @@
 <#if section = "form">
 <form class="st-app__login-form" onsubmit="login.disabled = true; return true;" action="${url.loginAction}" method="post">
     <div class="st-app__input">
-        <input class="st-app__input-control" autofocus placeholder="Login" name="username" type="text" />
+        <input class="st-app__input-control" autofocus placeholder="Login" value="${(login.username!'')}" name="username" type="text" />
         <svg class="st-app__icon">
             <use xlink:href="#login" />
         </svg>
