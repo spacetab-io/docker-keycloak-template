@@ -1,4 +1,4 @@
-<#macro registrationLayout displayMessage=false >
+<#macro registrationLayout bodyClass="" displayInfo=false displayMessage=true displayRequiredFields=false displayWide=false showAnotherWayIfPresent=true>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -169,6 +169,8 @@
             transition: box-shadow 0.1s; }
         .st-app__button:hover {
             box-shadow: 3px 6px 15px 0 #6080ff; }
+        .st-app__button:focus {
+            outline: none; }
         .st-app__logo {
             width: 200px;
             height: 47px;
@@ -231,6 +233,110 @@
             text-decoration: none; }
         .st-app__link:hover {
             color: #5517d8; }
+        .st-app__actions {
+            position: relative; }
+
+        .sk-circle-bounce {
+            display: none;
+            width: 2em;
+            height: 2em;
+            top: 20%;
+            left: 47%;
+            position: absolute;
+            }
+            .sk-circle-bounce .sk-child {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            }
+            .sk-circle-bounce .sk-child:before {
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: 15%;
+            height: 15%;
+            background-color: #fff;
+            border-radius: 100%;
+            animation: sk-circle-bounce-delay 1.2s infinite ease-in-out both;
+            }
+            .sk-circle-bounce .sk-circle-2 {
+            transform: rotate(30deg);
+            }
+            .sk-circle-bounce .sk-circle-3 {
+            transform: rotate(60deg);
+            }
+            .sk-circle-bounce .sk-circle-4 {
+            transform: rotate(90deg);
+            }
+            .sk-circle-bounce .sk-circle-5 {
+            transform: rotate(120deg);
+            }
+            .sk-circle-bounce .sk-circle-6 {
+            transform: rotate(150deg);
+            }
+            .sk-circle-bounce .sk-circle-7 {
+            transform: rotate(180deg);
+            }
+            .sk-circle-bounce .sk-circle-8 {
+            transform: rotate(210deg);
+            }
+            .sk-circle-bounce .sk-circle-9 {
+            transform: rotate(240deg);
+            }
+            .sk-circle-bounce .sk-circle-10 {
+            transform: rotate(270deg);
+            }
+            .sk-circle-bounce .sk-circle-11 {
+            transform: rotate(300deg);
+            }
+            .sk-circle-bounce .sk-circle-12 {
+            transform: rotate(330deg);
+            }
+            .sk-circle-bounce .sk-circle-2:before {
+            animation-delay: -1.1s;
+            }
+            .sk-circle-bounce .sk-circle-3:before {
+            animation-delay: -1s;
+            }
+            .sk-circle-bounce .sk-circle-4:before {
+            animation-delay: -0.9s;
+            }
+            .sk-circle-bounce .sk-circle-5:before {
+            animation-delay: -0.8s;
+            }
+            .sk-circle-bounce .sk-circle-6:before {
+            animation-delay: -0.7s;
+            }
+            .sk-circle-bounce .sk-circle-7:before {
+            animation-delay: -0.6s;
+            }
+            .sk-circle-bounce .sk-circle-8:before {
+            animation-delay: -0.5s;
+            }
+            .sk-circle-bounce .sk-circle-9:before {
+            animation-delay: -0.4s;
+            }
+            .sk-circle-bounce .sk-circle-10:before {
+            animation-delay: -0.3s;
+            }
+            .sk-circle-bounce .sk-circle-11:before {
+            animation-delay: -0.2s;
+            }
+            .sk-circle-bounce .sk-circle-12:before {
+            animation-delay: -0.1s;
+            }
+            @keyframes sk-circle-bounce-delay {
+            0%, 80%, 100% {
+                transform: scale(0);
+            }
+            40% {
+                transform: scale(1);
+            }
+            }
+
+
         @media screen and (max-width: 540px) {
             .st-app {
                 background-image: linear-gradient(to top, #0b1844, #382c65);
@@ -260,6 +366,9 @@
                 max-height: 250px;
                 min-height: 160px;
                 flex-grow: 1; }
+            .st-app__login-form {
+                width: 100%;
+            }
             .st-app__row {
                 width: 100%;
                 padding: 0;
@@ -283,12 +392,6 @@
     </div>
     </#if>
     <#nested "form">
-    <div class="st-app__copy-notify js-copy-modal">
-        Code is copied to clipboard!
-        <svg class="st-app__icon st-app__icon_notify js-close-copy">
-            <use xlink:href="#close" />
-        </svg>
-    </div>
 </div>
 <svg style="display: none">
     <symbol id="login" width="22" height="22" fill="none" viewBox="0 0 22 22">
