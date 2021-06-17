@@ -11,7 +11,7 @@
   "dependencies": {
     "autoprefixer": "^9.7.4",
     "node-sass": "^4.13.1",
-    "postcss": "^7.0.27",
+    "postcss": "^7.0.36",
     "reset-css": "^5.0.1"
   }
 }
