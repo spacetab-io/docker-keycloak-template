@@ -1,5 +1,5 @@
 IMAGE = spacetabio/keycloak
-VERSION = 5.0.0-1.0.0
+VERSION = 16.1.1-1.0.0
 
 image:
 	docker build -t $(IMAGE):$(VERSION) .
